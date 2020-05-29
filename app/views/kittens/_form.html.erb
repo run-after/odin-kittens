@@ -1,0 +1,16 @@
+<%= form_with model: @kitten, local: true do |f| %>
+  <%= f.label :name %><br>
+  <%= f.text_field :name %><br>
+
+  <%= f.label :age %><br>
+  <%= f.select :age, options_for_select(Array(1..15)) %><br>
+
+  <%= f.label :cuteness %><br>
+  <%= f.select :cuteness, options_for_select(Array(1..15)) %><br>
+
+  <%= f.label :softness %><br>
+  <%= f.select :softness, options_for_select(Array(1..15)) %><br>
+  <br>
+  <%= f.submit %>
+
+<% end %>

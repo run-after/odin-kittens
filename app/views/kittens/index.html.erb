@@ -1,0 +1,6 @@
+<h1>All Kittens</h1>
+
+<% @kittens.each do |cat| %>
+  <%= link_to cat.name, kitten_path(cat) %> | 
+  <%= link_to "Kill poor #{cat.name}", @kitten, method: :delete %><br>
+<% end %>

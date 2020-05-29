@@ -1,0 +1,10 @@
+<h1>Create a Kitten</h1>
+<% if @kitten.errors.any? %>
+  Hey, dummy... 
+  <% @kitten.errors.full_messages.each do |error| %>
+    <%= error %><br>
+  <% end %>
+    <br>
+<% end %>
+
+<%= render 'form' %>
